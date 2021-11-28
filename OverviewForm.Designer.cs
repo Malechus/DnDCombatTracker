@@ -105,8 +105,10 @@
             this.HPDetailLabel = new System.Windows.Forms.Label();
             this.InitiativeDetailLabel = new System.Windows.Forms.Label();
             this.NameDetailLabel = new System.Windows.Forms.Label();
-            this.ReduceHPLabel = new System.Windows.Forms.Label();
-            this.ReduceHPInput = new System.Windows.Forms.TextBox();
+            this.modifyHPLabel = new System.Windows.Forms.Label();
+            this.amountHPInput = new System.Windows.Forms.TextBox();
+            this.reduceButton = new System.Windows.Forms.Button();
+            this.increaseButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.ItemsGroupBox.SuspendLayout();
             this.ConditionsListGroupbox.SuspendLayout();
@@ -120,13 +122,13 @@
             // 
             // SaveButton
             // 
+            this.SaveButton.Location = new System.Drawing.Point(364, 21);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(100, 53);
             this.SaveButton.BackColor = System.Drawing.Color.Azure;
             this.SaveButton.Font = new System.Drawing.Font("Baskerville Old Face", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.ForeColor = System.Drawing.Color.DimGray;
-            this.SaveButton.Location = new System.Drawing.Point(14, 565);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(88, 46);
             this.SaveButton.TabIndex = 28;
             this.SaveButton.Text = "Save";
             this.SaveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -135,13 +137,13 @@
             // 
             // DeleteButton
             // 
+            this.DeleteButton.Location = new System.Drawing.Point(364, 92);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(100, 53);
             this.DeleteButton.BackColor = System.Drawing.Color.Azure;
             this.DeleteButton.Font = new System.Drawing.Font("Baskerville Old Face", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.ForeColor = System.Drawing.Color.DimGray;
-            this.DeleteButton.Location = new System.Drawing.Point(122, 565);
-            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(88, 46);
             this.DeleteButton.TabIndex = 29;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -150,6 +152,10 @@
             // 
             // NextButton
             // 
+            this.NextButton.Location = new System.Drawing.Point(408, 390);
+            this.NextButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(100, 234);
             this.NextButton.BackColor = System.Drawing.Color.Azure;
             this.NextButton.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
             this.NextButton.FlatAppearance.BorderSize = 5;
@@ -157,10 +163,6 @@
             this.NextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.NextButton.ForeColor = System.Drawing.Color.DimGray;
-            this.NextButton.Location = new System.Drawing.Point(357, 341);
-            this.NextButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(88, 205);
             this.NextButton.TabIndex = 30;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = false;
@@ -172,10 +174,9 @@
             this.InitiativeList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InitiativeList.FormattingEnabled = true;
             this.InitiativeList.ItemHeight = 18;
-            this.InitiativeList.Location = new System.Drawing.Point(7, 20);
+            this.InitiativeList.Location = new System.Drawing.Point(8, 23);
             this.InitiativeList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.InitiativeList.Name = "InitiativeList";
-            this.InitiativeList.Size = new System.Drawing.Size(420, 166);
             this.InitiativeList.TabIndex = 1;
             this.InitiativeList.SelectedIndexChanged += new System.EventHandler(this.InitiativeList_SelectedIndexChanged);
             // 
@@ -185,12 +186,12 @@
             this.ItemsGroupBox.Controls.Add(this.DeathSavesListGroupBox);
             this.ItemsGroupBox.Controls.Add(this.InitiativeList);
             this.ItemsGroupBox.Controls.Add(this.InfoListGroupBox);
-            this.ItemsGroupBox.Font = new System.Drawing.Font("Baskerville Old Face", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemsGroupBox.Location = new System.Drawing.Point(14, 13);
+            this.ItemsGroupBox.Location = new System.Drawing.Point(16, 15);
             this.ItemsGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ItemsGroupBox.Name = "ItemsGroupBox";
             this.ItemsGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ItemsGroupBox.Size = new System.Drawing.Size(433, 551);
+            this.ItemsGroupBox.Size = new System.Drawing.Size(495, 630);
+            this.ItemsGroupBox.Font = new System.Drawing.Font("Baskerville Old Face", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ItemsGroupBox.TabIndex = 4;
             this.ItemsGroupBox.TabStop = false;
             this.ItemsGroupBox.Text = "List";
@@ -211,12 +212,12 @@
             this.ConditionsListGroupbox.Controls.Add(this.DeafenedCheckbox);
             this.ConditionsListGroupbox.Controls.Add(this.CharmedCheckbox);
             this.ConditionsListGroupbox.Controls.Add(this.BlindedCheckbox);
-            this.ConditionsListGroupbox.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConditionsListGroupbox.Location = new System.Drawing.Point(7, 426);
+            this.ConditionsListGroupbox.Location = new System.Drawing.Point(8, 487);
             this.ConditionsListGroupbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ConditionsListGroupbox.Name = "ConditionsListGroupbox";
             this.ConditionsListGroupbox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ConditionsListGroupbox.Size = new System.Drawing.Size(416, 113);
+            this.ConditionsListGroupbox.Size = new System.Drawing.Size(476, 129);
+            this.ConditionsListGroupbox.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConditionsListGroupbox.TabIndex = 9;
             this.ConditionsListGroupbox.TabStop = false;
             this.ConditionsListGroupbox.Text = "Conditions";
@@ -224,12 +225,12 @@
             // UnconsciousCheckbox
             // 
             this.UnconsciousCheckbox.AutoSize = true;
-            this.UnconsciousCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.UnconsciousCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UnconsciousCheckbox.Location = new System.Drawing.Point(318, 42);
+            this.UnconsciousCheckbox.Location = new System.Drawing.Point(364, 48);
             this.UnconsciousCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UnconsciousCheckbox.Name = "UnconsciousCheckbox";
-            this.UnconsciousCheckbox.Size = new System.Drawing.Size(101, 20);
+            this.UnconsciousCheckbox.Size = new System.Drawing.Size(111, 21);
+            this.UnconsciousCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.UnconsciousCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UnconsciousCheckbox.TabIndex = 26;
             this.UnconsciousCheckbox.Text = "Unconscious";
             this.UnconsciousCheckbox.UseVisualStyleBackColor = false;
@@ -237,12 +238,12 @@
             // StunnedCheckbox
             // 
             this.StunnedCheckbox.AutoSize = true;
-            this.StunnedCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.StunnedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StunnedCheckbox.Location = new System.Drawing.Point(318, 23);
+            this.StunnedCheckbox.Location = new System.Drawing.Point(364, 26);
             this.StunnedCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StunnedCheckbox.Name = "StunnedCheckbox";
-            this.StunnedCheckbox.Size = new System.Drawing.Size(75, 20);
+            this.StunnedCheckbox.Size = new System.Drawing.Size(83, 21);
+            this.StunnedCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.StunnedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StunnedCheckbox.TabIndex = 25;
             this.StunnedCheckbox.Text = "Stunned";
             this.StunnedCheckbox.UseVisualStyleBackColor = false;
@@ -250,12 +251,12 @@
             // RestrainedCheckbox
             // 
             this.RestrainedCheckbox.AutoSize = true;
-            this.RestrainedCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.RestrainedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RestrainedCheckbox.Location = new System.Drawing.Point(211, 80);
+            this.RestrainedCheckbox.Location = new System.Drawing.Point(241, 92);
             this.RestrainedCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RestrainedCheckbox.Name = "RestrainedCheckbox";
-            this.RestrainedCheckbox.Size = new System.Drawing.Size(88, 20);
+            this.RestrainedCheckbox.Size = new System.Drawing.Size(99, 21);
+            this.RestrainedCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.RestrainedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RestrainedCheckbox.TabIndex = 24;
             this.RestrainedCheckbox.Text = "Restrained";
             this.RestrainedCheckbox.UseVisualStyleBackColor = false;
@@ -263,12 +264,12 @@
             // ProneCheckbox
             // 
             this.ProneCheckbox.AutoSize = true;
-            this.ProneCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.ProneCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProneCheckbox.Location = new System.Drawing.Point(211, 61);
+            this.ProneCheckbox.Location = new System.Drawing.Point(241, 70);
             this.ProneCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProneCheckbox.Name = "ProneCheckbox";
-            this.ProneCheckbox.Size = new System.Drawing.Size(63, 20);
+            this.ProneCheckbox.Size = new System.Drawing.Size(68, 21);
+            this.ProneCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.ProneCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProneCheckbox.TabIndex = 23;
             this.ProneCheckbox.Text = "Prone";
             this.ProneCheckbox.UseVisualStyleBackColor = false;
@@ -276,12 +277,12 @@
             // PoisonedCheckbox
             // 
             this.PoisonedCheckbox.AutoSize = true;
-            this.PoisonedCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.PoisonedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PoisonedCheckbox.Location = new System.Drawing.Point(211, 42);
+            this.PoisonedCheckbox.Location = new System.Drawing.Point(241, 48);
             this.PoisonedCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PoisonedCheckbox.Name = "PoisonedCheckbox";
-            this.PoisonedCheckbox.Size = new System.Drawing.Size(80, 20);
+            this.PoisonedCheckbox.Size = new System.Drawing.Size(89, 21);
+            this.PoisonedCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.PoisonedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PoisonedCheckbox.TabIndex = 22;
             this.PoisonedCheckbox.Text = "Poisoned";
             this.PoisonedCheckbox.UseVisualStyleBackColor = false;
@@ -289,12 +290,12 @@
             // PetrifiedCheckbox
             // 
             this.PetrifiedCheckbox.AutoSize = true;
-            this.PetrifiedCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.PetrifiedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PetrifiedCheckbox.Location = new System.Drawing.Point(211, 23);
+            this.PetrifiedCheckbox.Location = new System.Drawing.Point(241, 26);
             this.PetrifiedCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PetrifiedCheckbox.Name = "PetrifiedCheckbox";
-            this.PetrifiedCheckbox.Size = new System.Drawing.Size(76, 20);
+            this.PetrifiedCheckbox.Size = new System.Drawing.Size(82, 21);
+            this.PetrifiedCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.PetrifiedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PetrifiedCheckbox.TabIndex = 21;
             this.PetrifiedCheckbox.Text = "Petrified";
             this.PetrifiedCheckbox.UseVisualStyleBackColor = false;
@@ -302,12 +303,12 @@
             // ParalyzedCheckbox
             // 
             this.ParalyzedCheckbox.AutoSize = true;
-            this.ParalyzedCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.ParalyzedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ParalyzedCheckbox.Location = new System.Drawing.Point(111, 80);
+            this.ParalyzedCheckbox.Location = new System.Drawing.Point(127, 92);
             this.ParalyzedCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ParalyzedCheckbox.Name = "ParalyzedCheckbox";
-            this.ParalyzedCheckbox.Size = new System.Drawing.Size(83, 20);
+            this.ParalyzedCheckbox.Size = new System.Drawing.Size(93, 21);
+            this.ParalyzedCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.ParalyzedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ParalyzedCheckbox.TabIndex = 20;
             this.ParalyzedCheckbox.Text = "Paralyzed";
             this.ParalyzedCheckbox.UseVisualStyleBackColor = false;
@@ -315,12 +316,12 @@
             // InvisibleCheckbox
             // 
             this.InvisibleCheckbox.AutoSize = true;
-            this.InvisibleCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.InvisibleCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InvisibleCheckbox.Location = new System.Drawing.Point(111, 61);
+            this.InvisibleCheckbox.Location = new System.Drawing.Point(127, 70);
             this.InvisibleCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.InvisibleCheckbox.Name = "InvisibleCheckbox";
-            this.InvisibleCheckbox.Size = new System.Drawing.Size(75, 20);
+            this.InvisibleCheckbox.Size = new System.Drawing.Size(80, 21);
+            this.InvisibleCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.InvisibleCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InvisibleCheckbox.TabIndex = 19;
             this.InvisibleCheckbox.Text = "Invisible";
             this.InvisibleCheckbox.UseVisualStyleBackColor = false;
@@ -328,12 +329,12 @@
             // IncapacitatedCheckbox
             // 
             this.IncapacitatedCheckbox.AutoSize = true;
-            this.IncapacitatedCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.IncapacitatedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncapacitatedCheckbox.Location = new System.Drawing.Point(111, 42);
+            this.IncapacitatedCheckbox.Location = new System.Drawing.Point(127, 48);
             this.IncapacitatedCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IncapacitatedCheckbox.Name = "IncapacitatedCheckbox";
-            this.IncapacitatedCheckbox.Size = new System.Drawing.Size(103, 20);
+            this.IncapacitatedCheckbox.Size = new System.Drawing.Size(114, 21);
+            this.IncapacitatedCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.IncapacitatedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IncapacitatedCheckbox.TabIndex = 18;
             this.IncapacitatedCheckbox.Text = "Incapacitated";
             this.IncapacitatedCheckbox.UseVisualStyleBackColor = false;
@@ -341,12 +342,12 @@
             // GrappledCheckbox
             // 
             this.GrappledCheckbox.AutoSize = true;
-            this.GrappledCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.GrappledCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrappledCheckbox.Location = new System.Drawing.Point(111, 23);
+            this.GrappledCheckbox.Location = new System.Drawing.Point(127, 26);
             this.GrappledCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GrappledCheckbox.Name = "GrappledCheckbox";
-            this.GrappledCheckbox.Size = new System.Drawing.Size(82, 20);
+            this.GrappledCheckbox.Size = new System.Drawing.Size(89, 21);
+            this.GrappledCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.GrappledCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrappledCheckbox.TabIndex = 17;
             this.GrappledCheckbox.Text = "Grappled";
             this.GrappledCheckbox.UseVisualStyleBackColor = false;
@@ -354,12 +355,12 @@
             // FrightenedCheckbox
             // 
             this.FrightenedCheckbox.AutoSize = true;
-            this.FrightenedCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.FrightenedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FrightenedCheckbox.Location = new System.Drawing.Point(11, 80);
+            this.FrightenedCheckbox.Location = new System.Drawing.Point(13, 92);
             this.FrightenedCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FrightenedCheckbox.Name = "FrightenedCheckbox";
-            this.FrightenedCheckbox.Size = new System.Drawing.Size(89, 20);
+            this.FrightenedCheckbox.Size = new System.Drawing.Size(98, 21);
+            this.FrightenedCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.FrightenedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FrightenedCheckbox.TabIndex = 16;
             this.FrightenedCheckbox.Text = "Frightened";
             this.FrightenedCheckbox.UseVisualStyleBackColor = false;
@@ -367,12 +368,12 @@
             // DeafenedCheckbox
             // 
             this.DeafenedCheckbox.AutoSize = true;
-            this.DeafenedCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.DeafenedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeafenedCheckbox.Location = new System.Drawing.Point(11, 61);
+            this.DeafenedCheckbox.Location = new System.Drawing.Point(13, 70);
             this.DeafenedCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeafenedCheckbox.Name = "DeafenedCheckbox";
-            this.DeafenedCheckbox.Size = new System.Drawing.Size(83, 20);
+            this.DeafenedCheckbox.Size = new System.Drawing.Size(92, 21);
+            this.DeafenedCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.DeafenedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeafenedCheckbox.TabIndex = 15;
             this.DeafenedCheckbox.Text = "Deafened";
             this.DeafenedCheckbox.UseVisualStyleBackColor = false;
@@ -380,12 +381,12 @@
             // CharmedCheckbox
             // 
             this.CharmedCheckbox.AutoSize = true;
-            this.CharmedCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.CharmedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CharmedCheckbox.Location = new System.Drawing.Point(11, 42);
+            this.CharmedCheckbox.Location = new System.Drawing.Point(13, 48);
             this.CharmedCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CharmedCheckbox.Name = "CharmedCheckbox";
-            this.CharmedCheckbox.Size = new System.Drawing.Size(81, 20);
+            this.CharmedCheckbox.Size = new System.Drawing.Size(87, 21);
+            this.CharmedCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.CharmedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CharmedCheckbox.TabIndex = 14;
             this.CharmedCheckbox.Text = "Charmed";
             this.CharmedCheckbox.UseVisualStyleBackColor = false;
@@ -393,12 +394,12 @@
             // BlindedCheckbox
             // 
             this.BlindedCheckbox.AutoSize = true;
-            this.BlindedCheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.BlindedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BlindedCheckbox.Location = new System.Drawing.Point(11, 23);
+            this.BlindedCheckbox.Location = new System.Drawing.Point(13, 26);
             this.BlindedCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BlindedCheckbox.Name = "BlindedCheckbox";
-            this.BlindedCheckbox.Size = new System.Drawing.Size(72, 20);
+            this.BlindedCheckbox.Size = new System.Drawing.Size(77, 21);
+            this.BlindedCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.BlindedCheckbox.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BlindedCheckbox.TabIndex = 13;
             this.BlindedCheckbox.Text = "Blinded";
             this.BlindedCheckbox.UseVisualStyleBackColor = false;
@@ -413,12 +414,12 @@
             this.DeathSavesListGroupBox.Controls.Add(this.Success1ListCheckbox);
             this.DeathSavesListGroupBox.Controls.Add(this.FailListLabel);
             this.DeathSavesListGroupBox.Controls.Add(this.SuccessListLabel);
-            this.DeathSavesListGroupBox.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeathSavesListGroupBox.Location = new System.Drawing.Point(7, 341);
+            this.DeathSavesListGroupBox.Location = new System.Drawing.Point(8, 390);
             this.DeathSavesListGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeathSavesListGroupBox.Name = "DeathSavesListGroupBox";
             this.DeathSavesListGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.DeathSavesListGroupBox.Size = new System.Drawing.Size(217, 79);
+            this.DeathSavesListGroupBox.Size = new System.Drawing.Size(248, 90);
+            this.DeathSavesListGroupBox.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeathSavesListGroupBox.TabIndex = 8;
             this.DeathSavesListGroupBox.TabStop = false;
             this.DeathSavesListGroupBox.Text = "Death Saves";
@@ -427,7 +428,6 @@
             // 
             this.Fail2ListCheckbox.AutoSize = true;
             this.Fail2ListCheckbox.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.Fail2ListCheckbox.Location = new System.Drawing.Point(127, 54);
             this.Fail2ListCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Fail2ListCheckbox.Name = "Fail2ListCheckbox";
             this.Fail2ListCheckbox.Size = new System.Drawing.Size(18, 17);
@@ -438,7 +438,6 @@
             // 
             this.Fail3ListCheckbox.AutoSize = true;
             this.Fail3ListCheckbox.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.Fail3ListCheckbox.Location = new System.Drawing.Point(157, 54);
             this.Fail3ListCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Fail3ListCheckbox.Name = "Fail3ListCheckbox";
             this.Fail3ListCheckbox.Size = new System.Drawing.Size(18, 17);
@@ -449,7 +448,6 @@
             // 
             this.Fail1ListCheckbox.AutoSize = true;
             this.Fail1ListCheckbox.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.Fail1ListCheckbox.Location = new System.Drawing.Point(98, 54);
             this.Fail1ListCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Fail1ListCheckbox.Name = "Fail1ListCheckbox";
             this.Fail1ListCheckbox.Size = new System.Drawing.Size(18, 17);
@@ -460,7 +458,6 @@
             // 
             this.Success2ListCheckbox.AutoSize = true;
             this.Success2ListCheckbox.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.Success2ListCheckbox.Location = new System.Drawing.Point(127, 32);
             this.Success2ListCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Success2ListCheckbox.Name = "Success2ListCheckbox";
             this.Success2ListCheckbox.Size = new System.Drawing.Size(18, 17);
@@ -471,7 +468,6 @@
             // 
             this.Success3ListCheckbox.AutoSize = true;
             this.Success3ListCheckbox.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.Success3ListCheckbox.Location = new System.Drawing.Point(157, 32);
             this.Success3ListCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Success3ListCheckbox.Name = "Success3ListCheckbox";
             this.Success3ListCheckbox.Size = new System.Drawing.Size(18, 17);
@@ -482,7 +478,6 @@
             // 
             this.Success1ListCheckbox.AutoSize = true;
             this.Success1ListCheckbox.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.Success1ListCheckbox.Location = new System.Drawing.Point(98, 32);
             this.Success1ListCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Success1ListCheckbox.Name = "Success1ListCheckbox";
             this.Success1ListCheckbox.Size = new System.Drawing.Size(18, 17);
@@ -492,22 +487,22 @@
             // FailListLabel
             // 
             this.FailListLabel.AutoSize = true;
-            this.FailListLabel.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FailListLabel.Location = new System.Drawing.Point(8, 52);
+            this.FailListLabel.Location = new System.Drawing.Point(9, 59);
             this.FailListLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FailListLabel.Name = "FailListLabel";
-            this.FailListLabel.Size = new System.Drawing.Size(43, 22);
+            this.FailListLabel.Size = new System.Drawing.Size(45, 24);
+            this.FailListLabel.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FailListLabel.TabIndex = 1;
             this.FailListLabel.Text = "Fail:";
             // 
             // SuccessListLabel
             // 
             this.SuccessListLabel.AutoSize = true;
-            this.SuccessListLabel.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SuccessListLabel.Location = new System.Drawing.Point(7, 28);
+            this.SuccessListLabel.Location = new System.Drawing.Point(8, 32);
             this.SuccessListLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SuccessListLabel.Name = "SuccessListLabel";
-            this.SuccessListLabel.Size = new System.Drawing.Size(74, 22);
+            this.SuccessListLabel.Size = new System.Drawing.Size(87, 24);
+            this.SuccessListLabel.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SuccessListLabel.TabIndex = 0;
             this.SuccessListLabel.Text = "Success:";
             // 
@@ -517,18 +512,20 @@
             this.InfoListGroupBox.Controls.Add(this.TempHPInput);
             this.InfoListGroupBox.Controls.Add(this.NameInput);
             this.InfoListGroupBox.Controls.Add(this.HPDivideListLabel);
+            this.InfoListGroupBox.Controls.Add(this.DeleteButton);
             this.InfoListGroupBox.Controls.Add(this.MaxHPInput);
+            this.InfoListGroupBox.Controls.Add(this.SaveButton);
             this.InfoListGroupBox.Controls.Add(this.InitiativeListLabel);
             this.InfoListGroupBox.Controls.Add(this.HPMaxHPListLabel);
             this.InfoListGroupBox.Controls.Add(this.HPInput);
             this.InfoListGroupBox.Controls.Add(this.TempHPListLabel);
             this.InfoListGroupBox.Controls.Add(this.InitiativeInput);
-            this.InfoListGroupBox.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoListGroupBox.Location = new System.Drawing.Point(7, 206);
+            this.InfoListGroupBox.Location = new System.Drawing.Point(8, 235);
             this.InfoListGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.InfoListGroupBox.Name = "InfoListGroupBox";
             this.InfoListGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.InfoListGroupBox.Size = new System.Drawing.Size(421, 340);
+            this.InfoListGroupBox.Size = new System.Drawing.Size(481, 389);
+            this.InfoListGroupBox.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoListGroupBox.TabIndex = 14;
             this.InfoListGroupBox.TabStop = false;
             this.InfoListGroupBox.Text = "Information";
@@ -538,52 +535,52 @@
             this.NameListLabel.AutoSize = true;
             this.NameListLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameListLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.NameListLabel.Location = new System.Drawing.Point(7, 22);
+            this.NameListLabel.Location = new System.Drawing.Point(8, 25);
             this.NameListLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NameListLabel.Name = "NameListLabel";
-            this.NameListLabel.Size = new System.Drawing.Size(63, 19);
+            this.NameListLabel.Size = new System.Drawing.Size(73, 24);
             this.NameListLabel.TabIndex = 4;
             this.NameListLabel.Text = "Name:*";
             // 
             // TempHPInput
             // 
-            this.TempHPInput.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.TempHPInput.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TempHPInput.Location = new System.Drawing.Point(122, 106);
+            this.TempHPInput.Location = new System.Drawing.Point(140, 121);
             this.TempHPInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TempHPInput.Name = "TempHPInput";
-            this.TempHPInput.Size = new System.Drawing.Size(29, 27);
+            this.TempHPInput.Size = new System.Drawing.Size(33, 24);
+            this.TempHPInput.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.TempHPInput.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TempHPInput.TabIndex = 6;
             // 
             // NameInput
             // 
-            this.NameInput.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.NameInput.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameInput.Location = new System.Drawing.Point(122, 22);
+            this.NameInput.Location = new System.Drawing.Point(140, 25);
             this.NameInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NameInput.Name = "NameInput";
-            this.NameInput.Size = new System.Drawing.Size(116, 27);
+            this.NameInput.Size = new System.Drawing.Size(132, 24);
+            this.NameInput.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.NameInput.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameInput.TabIndex = 2;
             // 
             // HPDivideListLabel
             // 
             this.HPDivideListLabel.AutoSize = true;
-            this.HPDivideListLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HPDivideListLabel.Location = new System.Drawing.Point(165, 78);
+            this.HPDivideListLabel.Location = new System.Drawing.Point(189, 89);
             this.HPDivideListLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HPDivideListLabel.Name = "HPDivideListLabel";
-            this.HPDivideListLabel.Size = new System.Drawing.Size(14, 19);
+            this.HPDivideListLabel.Size = new System.Drawing.Size(15, 24);
+            this.HPDivideListLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPDivideListLabel.TabIndex = 8;
             this.HPDivideListLabel.Text = "/";
             // 
             // MaxHPInput
             // 
-            this.MaxHPInput.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.MaxHPInput.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaxHPInput.Location = new System.Drawing.Point(186, 78);
+            this.MaxHPInput.Location = new System.Drawing.Point(213, 89);
             this.MaxHPInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaxHPInput.Name = "MaxHPInput";
-            this.MaxHPInput.Size = new System.Drawing.Size(29, 27);
+            this.MaxHPInput.Size = new System.Drawing.Size(33, 24);
+            this.MaxHPInput.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.MaxHPInput.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaxHPInput.TabIndex = 5;
             // 
             // InitiativeListLabel
@@ -601,43 +598,44 @@
             // HPMaxHPListLabel
             // 
             this.HPMaxHPListLabel.AutoSize = true;
-            this.HPMaxHPListLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HPMaxHPListLabel.Location = new System.Drawing.Point(7, 78);
+            this.HPMaxHPListLabel.Location = new System.Drawing.Point(8, 89);
             this.HPMaxHPListLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HPMaxHPListLabel.Name = "HPMaxHPListLabel";
-            this.HPMaxHPListLabel.Size = new System.Drawing.Size(108, 19);
+            this.HPMaxHPListLabel.Size = new System.Drawing.Size(123, 24);
+            this.HPMaxHPListLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPMaxHPListLabel.TabIndex = 6;
             this.HPMaxHPListLabel.Text = "HP / Max HP:";
             // 
             // HPInput
             // 
-            this.HPInput.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.HPInput.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HPInput.Location = new System.Drawing.Point(122, 78);
+            this.HPInput.Location = new System.Drawing.Point(140, 89);
             this.HPInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HPInput.Name = "HPInput";
-            this.HPInput.Size = new System.Drawing.Size(29, 27);
+            this.HPInput.Size = new System.Drawing.Size(33, 24);
+            this.HPInput.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.HPInput.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPInput.TabIndex = 4;
             // 
             // TempHPListLabel
             // 
             this.TempHPListLabel.AutoSize = true;
-            this.TempHPListLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TempHPListLabel.Location = new System.Drawing.Point(7, 106);
+            this.TempHPListLabel.Location = new System.Drawing.Point(8, 121);
             this.TempHPListLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TempHPListLabel.Name = "TempHPListLabel";
-            this.TempHPListLabel.Size = new System.Drawing.Size(84, 19);
+            this.TempHPListLabel.Size = new System.Drawing.Size(96, 24);
+            this.TempHPListLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.TempHPListLabel.TabIndex = 7;
             this.TempHPListLabel.Text = "Temp HP:";
             // 
             // InitiativeInput
             // 
-            this.InitiativeInput.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.InitiativeInput.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InitiativeInput.Location = new System.Drawing.Point(122, 50);
+            this.InitiativeInput.Location = new System.Drawing.Point(140, 57);
             this.InitiativeInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.InitiativeInput.Name = "InitiativeInput";
-            this.InitiativeInput.Size = new System.Drawing.Size(29, 27);
+            this.InitiativeInput.Size = new System.Drawing.Size(33, 24);
+            this.InitiativeInput.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.InitiativeInput.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InitiativeInput.TabIndex = 3;
             // 
             // DetailsGroupBox
@@ -657,12 +655,12 @@
             this.DetailsGroupBox.Controls.Add(this.HPDetailLabel);
             this.DetailsGroupBox.Controls.Add(this.InitiativeDetailLabel);
             this.DetailsGroupBox.Controls.Add(this.NameDetailLabel);
-            this.DetailsGroupBox.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DetailsGroupBox.Location = new System.Drawing.Point(454, 13);
+            this.DetailsGroupBox.Location = new System.Drawing.Point(519, 15);
             this.DetailsGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DetailsGroupBox.Name = "DetailsGroupBox";
             this.DetailsGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.DetailsGroupBox.Size = new System.Drawing.Size(458, 551);
+            this.DetailsGroupBox.Size = new System.Drawing.Size(524, 630);
+            this.DetailsGroupBox.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DetailsGroupBox.TabIndex = 5;
             this.DetailsGroupBox.TabStop = false;
             this.DetailsGroupBox.Text = "Details";
@@ -679,12 +677,12 @@
             this.groupBox2.Controls.Add(this.TempHPNextDetailLabel);
             this.groupBox2.Controls.Add(this.NextInitiativePlaceholderLabel);
             this.groupBox2.Controls.Add(this.NextNamePlaceholderLabel);
-            this.groupBox2.Font = new System.Drawing.Font("Baskerville Old Face", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(13, 332);
+            this.groupBox2.Location = new System.Drawing.Point(15, 379);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(337, 214);
+            this.groupBox2.Size = new System.Drawing.Size(385, 245);
+            this.groupBox2.Font = new System.Drawing.Font("Baskerville Old Face", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Next Character Information";
@@ -692,113 +690,113 @@
             // NextMaxHPPlaceholderLabel
             // 
             this.NextMaxHPPlaceholderLabel.AutoSize = true;
-            this.NextMaxHPPlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextMaxHPPlaceholderLabel.Location = new System.Drawing.Point(217, 116);
+            this.NextMaxHPPlaceholderLabel.Location = new System.Drawing.Point(248, 132);
             this.NextMaxHPPlaceholderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NextMaxHPPlaceholderLabel.Name = "NextMaxHPPlaceholderLabel";
-            this.NextMaxHPPlaceholderLabel.Size = new System.Drawing.Size(0, 19);
+            this.NextMaxHPPlaceholderLabel.Size = new System.Drawing.Size(0, 24);
+            this.NextMaxHPPlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextMaxHPPlaceholderLabel.TabIndex = 35;
             // 
             // NameNextDetailLabel
             // 
             this.NameNextDetailLabel.AutoSize = true;
-            this.NameNextDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameNextDetailLabel.Location = new System.Drawing.Point(21, 38);
+            this.NameNextDetailLabel.Location = new System.Drawing.Point(24, 43);
             this.NameNextDetailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NameNextDetailLabel.Name = "NameNextDetailLabel";
-            this.NameNextDetailLabel.Size = new System.Drawing.Size(55, 19);
+            this.NameNextDetailLabel.Size = new System.Drawing.Size(94, 31);
+            this.NameNextDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameNextDetailLabel.TabIndex = 26;
             this.NameNextDetailLabel.Text = "Name:";
             // 
             // HPDividerNextDetailLabel
             // 
             this.HPDividerNextDetailLabel.AutoSize = true;
-            this.HPDividerNextDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HPDividerNextDetailLabel.Location = new System.Drawing.Point(196, 116);
+            this.HPDividerNextDetailLabel.Location = new System.Drawing.Point(224, 132);
             this.HPDividerNextDetailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HPDividerNextDetailLabel.Name = "HPDividerNextDetailLabel";
-            this.HPDividerNextDetailLabel.Size = new System.Drawing.Size(14, 19);
+            this.HPDividerNextDetailLabel.Size = new System.Drawing.Size(15, 24);
+            this.HPDividerNextDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPDividerNextDetailLabel.TabIndex = 34;
             this.HPDividerNextDetailLabel.Text = "/";
             // 
             // InitiativeNextDetailLabel
             // 
             this.InitiativeNextDetailLabel.AutoSize = true;
-            this.InitiativeNextDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InitiativeNextDetailLabel.Location = new System.Drawing.Point(21, 74);
+            this.InitiativeNextDetailLabel.Location = new System.Drawing.Point(24, 85);
             this.InitiativeNextDetailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.InitiativeNextDetailLabel.Name = "InitiativeNextDetailLabel";
-            this.InitiativeNextDetailLabel.Size = new System.Drawing.Size(70, 19);
+            this.InitiativeNextDetailLabel.Size = new System.Drawing.Size(123, 31);
+            this.InitiativeNextDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InitiativeNextDetailLabel.TabIndex = 27;
             this.InitiativeNextDetailLabel.Text = "Initiative:";
             // 
             // NextTempHPPlaceholderLabel
             // 
             this.NextTempHPPlaceholderLabel.AutoSize = true;
-            this.NextTempHPPlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextTempHPPlaceholderLabel.Location = new System.Drawing.Point(161, 153);
+            this.NextTempHPPlaceholderLabel.Location = new System.Drawing.Point(184, 175);
             this.NextTempHPPlaceholderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NextTempHPPlaceholderLabel.Name = "NextTempHPPlaceholderLabel";
-            this.NextTempHPPlaceholderLabel.Size = new System.Drawing.Size(0, 19);
+            this.NextTempHPPlaceholderLabel.Size = new System.Drawing.Size(0, 24);
+            this.NextTempHPPlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextTempHPPlaceholderLabel.TabIndex = 33;
             // 
             // HPNextDetailLabel
             // 
             this.HPNextDetailLabel.AutoSize = true;
-            this.HPNextDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HPNextDetailLabel.Location = new System.Drawing.Point(21, 111);
+            this.HPNextDetailLabel.Location = new System.Drawing.Point(24, 127);
             this.HPNextDetailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HPNextDetailLabel.Name = "HPNextDetailLabel";
-            this.HPNextDetailLabel.Size = new System.Drawing.Size(37, 19);
+            this.HPNextDetailLabel.Size = new System.Drawing.Size(60, 31);
+            this.HPNextDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPNextDetailLabel.TabIndex = 28;
             this.HPNextDetailLabel.Text = "HP:";
             // 
             // NextHPPlaceholderLabel
             // 
             this.NextHPPlaceholderLabel.AutoSize = true;
-            this.NextHPPlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextHPPlaceholderLabel.Location = new System.Drawing.Point(161, 116);
+            this.NextHPPlaceholderLabel.Location = new System.Drawing.Point(184, 132);
             this.NextHPPlaceholderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NextHPPlaceholderLabel.Name = "NextHPPlaceholderLabel";
-            this.NextHPPlaceholderLabel.Size = new System.Drawing.Size(0, 19);
+            this.NextHPPlaceholderLabel.Size = new System.Drawing.Size(0, 24);
+            this.NextHPPlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextHPPlaceholderLabel.TabIndex = 32;
             // 
             // TempHPNextDetailLabel
             // 
             this.TempHPNextDetailLabel.AutoSize = true;
-            this.TempHPNextDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TempHPNextDetailLabel.Location = new System.Drawing.Point(21, 148);
+            this.TempHPNextDetailLabel.Location = new System.Drawing.Point(24, 169);
             this.TempHPNextDetailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TempHPNextDetailLabel.Name = "TempHPNextDetailLabel";
-            this.TempHPNextDetailLabel.Size = new System.Drawing.Size(84, 19);
+            this.TempHPNextDetailLabel.Size = new System.Drawing.Size(136, 31);
+            this.TempHPNextDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TempHPNextDetailLabel.TabIndex = 29;
             this.TempHPNextDetailLabel.Text = "Temp HP:";
             // 
             // NextInitiativePlaceholderLabel
             // 
             this.NextInitiativePlaceholderLabel.AutoSize = true;
-            this.NextInitiativePlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextInitiativePlaceholderLabel.Location = new System.Drawing.Point(161, 79);
+            this.NextInitiativePlaceholderLabel.Location = new System.Drawing.Point(184, 90);
             this.NextInitiativePlaceholderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NextInitiativePlaceholderLabel.Name = "NextInitiativePlaceholderLabel";
-            this.NextInitiativePlaceholderLabel.Size = new System.Drawing.Size(0, 19);
+            this.NextInitiativePlaceholderLabel.Size = new System.Drawing.Size(0, 24);
+            this.NextInitiativePlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextInitiativePlaceholderLabel.TabIndex = 31;
             // 
             // NextNamePlaceholderLabel
             // 
             this.NextNamePlaceholderLabel.AutoSize = true;
-            this.NextNamePlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextNamePlaceholderLabel.Location = new System.Drawing.Point(161, 42);
+            this.NextNamePlaceholderLabel.Location = new System.Drawing.Point(184, 48);
             this.NextNamePlaceholderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NextNamePlaceholderLabel.Name = "NextNamePlaceholderLabel";
-            this.NextNamePlaceholderLabel.Size = new System.Drawing.Size(0, 19);
+            this.NextNamePlaceholderLabel.Size = new System.Drawing.Size(0, 24);
+            this.NextNamePlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextNamePlaceholderLabel.TabIndex = 30;
             // 
             // DetailSeperatorLabel
             // 
             this.DetailSeperatorLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DetailSeperatorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DetailSeperatorLabel.Location = new System.Drawing.Point(13, 314);
+             this.DetailSeperatorLabel.Location = new System.Drawing.Point(15, 359);
             this.DetailSeperatorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DetailSeperatorLabel.MaximumSize = new System.Drawing.Size(0, 2);
             this.DetailSeperatorLabel.MinimumSize = new System.Drawing.Size(0, 2);
@@ -816,12 +814,12 @@
             this.groupBox1.Controls.Add(this.Success1DetailCheckbox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 224);
+            this.groupBox1.Location = new System.Drawing.Point(15, 256);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(206, 79);
+            this.groupBox1.Size = new System.Drawing.Size(235, 90);
+            this.groupBox1.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Death Saves";
@@ -891,7 +889,7 @@
             this.Success1DetailCheckbox.AutoSize = true;
             this.Success1DetailCheckbox.BackColor = System.Drawing.Color.AntiqueWhite;
             this.Success1DetailCheckbox.Enabled = false;
-            this.Success1DetailCheckbox.Location = new System.Drawing.Point(102, 32);
+            this.Success1DetailCheckbox.Location = new System.Drawing.Point(116, 37);
             this.Success1DetailCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Success1DetailCheckbox.Name = "Success1DetailCheckbox";
             this.Success1DetailCheckbox.Size = new System.Drawing.Size(18, 17);
@@ -901,22 +899,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 52);
+            this.label2.Location = new System.Drawing.Point(9, 59);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 22);
+            this.label2.Size = new System.Drawing.Size(45, 24);
+            this.label2.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.TabIndex = 1;
             this.label2.Text = "Fail:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 28);
+            this.label3.Location = new System.Drawing.Point(8, 32);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 22);
+            this.label3.Size = new System.Drawing.Size(87, 24);
+            this.label3.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.TabIndex = 0;
             this.label3.Text = "Success:";
             // 
@@ -948,143 +946,162 @@
             // MaxHPPlaceholderLabel
             // 
             this.MaxHPPlaceholderLabel.AutoSize = true;
-            this.MaxHPPlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaxHPPlaceholderLabel.Location = new System.Drawing.Point(203, 114);
+            this.MaxHPPlaceholderLabel.Location = new System.Drawing.Point(232, 130);
             this.MaxHPPlaceholderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MaxHPPlaceholderLabel.Name = "MaxHPPlaceholderLabel";
-            this.MaxHPPlaceholderLabel.Size = new System.Drawing.Size(0, 16);
+            this.MaxHPPlaceholderLabel.Size = new System.Drawing.Size(0, 24);
+            this.MaxHPPlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaxHPPlaceholderLabel.TabIndex = 23;
             // 
             // HPDividerDetailLabel
             // 
             this.HPDividerDetailLabel.AutoSize = true;
-            this.HPDividerDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HPDividerDetailLabel.Location = new System.Drawing.Point(182, 114);
+            this.HPDividerDetailLabel.Location = new System.Drawing.Point(208, 130);
             this.HPDividerDetailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HPDividerDetailLabel.Name = "HPDividerDetailLabel";
-            this.HPDividerDetailLabel.Size = new System.Drawing.Size(14, 19);
+            this.HPDividerDetailLabel.Size = new System.Drawing.Size(15, 24);
+            this.HPDividerDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPDividerDetailLabel.TabIndex = 22;
             this.HPDividerDetailLabel.Text = "/";
             // 
             // TempHPPlaceholderLabel
             // 
             this.TempHPPlaceholderLabel.AutoSize = true;
-            this.TempHPPlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TempHPPlaceholderLabel.Location = new System.Drawing.Point(147, 152);
+            this.TempHPPlaceholderLabel.Location = new System.Drawing.Point(168, 174);
             this.TempHPPlaceholderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TempHPPlaceholderLabel.Name = "TempHPPlaceholderLabel";
-            this.TempHPPlaceholderLabel.Size = new System.Drawing.Size(0, 19);
+            this.TempHPPlaceholderLabel.Size = new System.Drawing.Size(0, 24);
+            this.TempHPPlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TempHPPlaceholderLabel.TabIndex = 21;
             // 
             // HPPlaceholderLabel
             // 
             this.HPPlaceholderLabel.AutoSize = true;
-            this.HPPlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HPPlaceholderLabel.Location = new System.Drawing.Point(147, 114);
+            this.HPPlaceholderLabel.Location = new System.Drawing.Point(168, 130);
             this.HPPlaceholderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HPPlaceholderLabel.Name = "HPPlaceholderLabel";
-            this.HPPlaceholderLabel.Size = new System.Drawing.Size(0, 19);
+            this.HPPlaceholderLabel.Size = new System.Drawing.Size(0, 24);
+            this.HPPlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPPlaceholderLabel.TabIndex = 20;
             // 
             // InitiativePlaceholderLabel
             // 
             this.InitiativePlaceholderLabel.AutoSize = true;
-            this.InitiativePlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InitiativePlaceholderLabel.Location = new System.Drawing.Point(147, 78);
+            this.InitiativePlaceholderLabel.Location = new System.Drawing.Point(168, 89);
             this.InitiativePlaceholderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.InitiativePlaceholderLabel.Name = "InitiativePlaceholderLabel";
-            this.InitiativePlaceholderLabel.Size = new System.Drawing.Size(0, 19);
+            this.InitiativePlaceholderLabel.Size = new System.Drawing.Size(0, 24);
+            this.InitiativePlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InitiativePlaceholderLabel.TabIndex = 19;
             // 
             // NamePlaceholderLabel
             // 
             this.NamePlaceholderLabel.AutoSize = true;
-            this.NamePlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NamePlaceholderLabel.Location = new System.Drawing.Point(147, 41);
+            this.NamePlaceholderLabel.Location = new System.Drawing.Point(168, 47);
             this.NamePlaceholderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NamePlaceholderLabel.Name = "NamePlaceholderLabel";
-            this.NamePlaceholderLabel.Size = new System.Drawing.Size(0, 19);
+            this.NamePlaceholderLabel.Size = new System.Drawing.Size(0, 24);
+            this.NamePlaceholderLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NamePlaceholderLabel.TabIndex = 18;
             // 
             // TempHPDetailLabel
             // 
             this.TempHPDetailLabel.AutoSize = true;
-            this.TempHPDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TempHPDetailLabel.Location = new System.Drawing.Point(7, 146);
+            this.TempHPDetailLabel.Location = new System.Drawing.Point(8, 167);
             this.TempHPDetailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TempHPDetailLabel.Name = "TempHPDetailLabel";
-            this.TempHPDetailLabel.Size = new System.Drawing.Size(84, 19);
+            this.TempHPDetailLabel.Size = new System.Drawing.Size(136, 31);
+            this.TempHPDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TempHPDetailLabel.TabIndex = 17;
             this.TempHPDetailLabel.Text = "Temp HP:";
             // 
             // HPDetailLabel
             // 
             this.HPDetailLabel.AutoSize = true;
-            this.HPDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HPDetailLabel.Location = new System.Drawing.Point(7, 110);
+            this.HPDetailLabel.Location = new System.Drawing.Point(8, 126);
             this.HPDetailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HPDetailLabel.Name = "HPDetailLabel";
-            this.HPDetailLabel.Size = new System.Drawing.Size(37, 19);
+            this.HPDetailLabel.Size = new System.Drawing.Size(60, 31);
+            this.HPDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HPDetailLabel.TabIndex = 16;
             this.HPDetailLabel.Text = "HP:";
             // 
             // InitiativeDetailLabel
             // 
             this.InitiativeDetailLabel.AutoSize = true;
-            this.InitiativeDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InitiativeDetailLabel.Location = new System.Drawing.Point(7, 74);
+            this.InitiativeDetailLabel.Location = new System.Drawing.Point(8, 84);
             this.InitiativeDetailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.InitiativeDetailLabel.Name = "InitiativeDetailLabel";
-            this.InitiativeDetailLabel.Size = new System.Drawing.Size(70, 19);
+            this.InitiativeDetailLabel.Size = new System.Drawing.Size(123, 31);
+            this.InitiativeDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InitiativeDetailLabel.TabIndex = 15;
             this.InitiativeDetailLabel.Text = "Initiative:";
             // 
             // NameDetailLabel
             // 
             this.NameDetailLabel.AutoSize = true;
-            this.NameDetailLabel.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameDetailLabel.Location = new System.Drawing.Point(7, 37);
+            this.NameDetailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameDetailLabel.Location = new System.Drawing.Point(8, 42);
             this.NameDetailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NameDetailLabel.Name = "NameDetailLabel";
-            this.NameDetailLabel.Size = new System.Drawing.Size(55, 19);
+            this.NameDetailLabel.Size = new System.Drawing.Size(94, 31);
             this.NameDetailLabel.TabIndex = 14;
             this.NameDetailLabel.Text = "Name:";
             // 
-            // ReduceHPLabel
+            // modifyHPLabel
             // 
-            this.ReduceHPLabel.AutoSize = true;
-            this.ReduceHPLabel.Font = new System.Drawing.Font("Baskerville Old Face", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReduceHPLabel.Location = new System.Drawing.Point(244, 580);
-            this.ReduceHPLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.ReduceHPLabel.Name = "ReduceHPLabel";
-            this.ReduceHPLabel.Size = new System.Drawing.Size(79, 16);
-            this.ReduceHPLabel.TabIndex = 14;
-            this.ReduceHPLabel.Text = "Reduce HP: ";
+            this.modifyHPLabel.AutoSize = true;
+            this.modifyHPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyHPLabel.Location = new System.Drawing.Point(12, 661);
+            this.modifyHPLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.modifyHPLabel.Name = "modifyHPLabel";
+            this.modifyHPLabel.Size = new System.Drawing.Size(106, 24);
+            this.modifyHPLabel.TabIndex = 14;
+            this.modifyHPLabel.Text = "Modify HP: ";
             // 
-            // ReduceHPInput
+            // amountHPInput
             // 
-            this.ReduceHPInput.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ReduceHPInput.Font = new System.Drawing.Font("Baskerville Old Face", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReduceHPInput.Location = new System.Drawing.Point(358, 579);
-            this.ReduceHPInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ReduceHPInput.Name = "ReduceHPInput";
-            this.ReduceHPInput.Size = new System.Drawing.Size(29, 22);
-            this.ReduceHPInput.TabIndex = 27;
+            this.amountHPInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.amountHPInput.Location = new System.Drawing.Point(126, 661);
+            this.amountHPInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.amountHPInput.Name = "amountHPInput";
+            this.amountHPInput.Size = new System.Drawing.Size(33, 24);
+            this.amountHPInput.TabIndex = 27;
+            // 
+            // reduceButton
+            // 
+            this.reduceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reduceButton.Location = new System.Drawing.Point(169, 661);
+            this.reduceButton.Name = "reduceButton";
+            this.reduceButton.Size = new System.Drawing.Size(33, 24);
+            this.reduceButton.TabIndex = 28;
+            this.reduceButton.Text = "-";
+            this.reduceButton.UseVisualStyleBackColor = true;
+            this.reduceButton.Click += new System.EventHandler(this.reduceButton_Click);
+            // 
+            // increaseButton
+            // 
+            this.increaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.increaseButton.Location = new System.Drawing.Point(208, 661);
+            this.increaseButton.Name = "increaseButton";
+            this.increaseButton.Size = new System.Drawing.Size(33, 24);
+            this.increaseButton.TabIndex = 29;
+            this.increaseButton.Text = "+";
+            this.increaseButton.UseVisualStyleBackColor = true;
+            this.increaseButton.Click += new System.EventHandler(this.increaseButton_Click);
             // 
             // OverviewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Bisque;
-            this.ClientSize = new System.Drawing.Size(927, 625);
-            this.Controls.Add(this.ReduceHPInput);
-            this.Controls.Add(this.ReduceHPLabel);
+            this.ClientSize = new System.Drawing.Size(1059, 714);
+            this.Controls.Add(this.increaseButton);
+            this.Controls.Add(this.reduceButton);
+            this.Controls.Add(this.amountHPInput);
+            this.Controls.Add(this.modifyHPLabel);
             this.Controls.Add(this.DetailsGroupBox);
             this.Controls.Add(this.ItemsGroupBox);
-            this.Controls.Add(this.DeleteButton);
-            this.Controls.Add(this.SaveButton);
-            this.Font = new System.Drawing.Font("Baskerville Old Face", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.DimGray;
+
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -1154,8 +1171,8 @@
         private System.Windows.Forms.CheckBox GrappledCheckbox;
         private System.Windows.Forms.CheckBox FrightenedCheckbox;
         private System.Windows.Forms.CheckBox DeafenedCheckbox;
-        private System.Windows.Forms.Label ReduceHPLabel;
-        private System.Windows.Forms.TextBox ReduceHPInput;
+        private System.Windows.Forms.Label modifyHPLabel;
+        private System.Windows.Forms.TextBox amountHPInput;
         private System.Windows.Forms.Label TempHPDetailLabel;
         private System.Windows.Forms.Label HPDetailLabel;
         private System.Windows.Forms.Label InitiativeDetailLabel;
@@ -1189,5 +1206,7 @@
         private System.Windows.Forms.Label TempHPNextDetailLabel;
         private System.Windows.Forms.Label NextInitiativePlaceholderLabel;
         private System.Windows.Forms.Label NextNamePlaceholderLabel;
+        private System.Windows.Forms.Button reduceButton;
+        private System.Windows.Forms.Button increaseButton;
     }
 }
