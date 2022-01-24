@@ -154,7 +154,7 @@ namespace CombatTracker
             InitiativeListLabel.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
             HPMaxHPListLabel.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
             TempHPListLabel.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
-            modifyHPLabel.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
+            ReduceHPLabel.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
 
             bool errors = false;
             bool hpErrors = false;
@@ -167,7 +167,7 @@ namespace CombatTracker
 
             short? maxHP = TryParseNullable(MaxHPInput.Text.Trim());
             short? tempHP = TryParseNullable(TempHPInput.Text.Trim());
-            short? reduceHP = TryParseNullable(amountHPInput.Text.Trim());
+            short? reduceHP = TryParseNullable(ReduceHPInput.Text.Trim());
 
             if (name.Length == 0)
             {
@@ -227,7 +227,7 @@ namespace CombatTracker
                     if (reduceHP.Value < 0)
                     {
                         errors = true;
-                        modifyHPLabel.ForeColor = Color.Red;
+                        ReduceHPLabel.ForeColor = Color.Red;
                     }
                     else
                     {
@@ -295,11 +295,11 @@ namespace CombatTracker
                 {
                     //Right now it is unclear if the user has entered wrong input (for example: "dsfsdf") or just didn't didnt enter anything into the Reduce HP range
                     //That is why we check if the input is empty or not
-                    if (amountHPInput.Text.Trim().Length != 0)
+                    if (ReduceHPInput.Text.Trim().Length != 0)
                     {
                         //The user entered wrong input, this is an error!
                         errors = true;
-                        modifyHPLabel.ForeColor = Color.Red;
+                        ReduceHPLabel.ForeColor = Color.Red;
                     }
                 }
             }
@@ -365,7 +365,7 @@ namespace CombatTracker
 
                 Sort();
 
-                amountHPInput.Text = string.Empty;
+                ReduceHPInput.Text = string.Empty;
 
                 UpdateInfoTab(character);
 
@@ -448,7 +448,7 @@ namespace CombatTracker
                     item.Key.Checked = false;
                 }
 
-                amountHPInput.Text = string.Empty;
+                ReduceHPInput.Text = string.Empty;
 
             }
             else
@@ -619,28 +619,6 @@ namespace CombatTracker
         {
             short outValue;
             return short.TryParse(val, out outValue) ? (short?)outValue : null;
-        }
-
-        private void reduceButton_Click(object sender, EventArgs e)
-        {
-            var character = InitiativeList.SelectedValue as Character ?? (CharacterList.Count > 0 ? CharacterList[0] : null);
-
-            short subAmt = short.Parse(amountHPInput.Text);
-
-            character.HP = (short)(character.HP - subAmt);
-
-            UpdateDetailsTab(character);
-        }
-
-        private void increaseButton_Click(object sender, EventArgs e)
-        {
-            var character = InitiativeList.SelectedValue as Character ?? (CharacterList.Count > 0 ? CharacterList[0] : null);
-
-            short addAmt = short.Parse(amountHPInput.Text);
-
-            character.HP = (short)(character.HP + addAmt);
-
-            UpdateDetailsTab(character);
         }
     }
 }
